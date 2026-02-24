@@ -1,3 +1,9 @@
+import os
+import sys
+
+# ensure src package is on sys.path when running tests directly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from src.math_operation import add, sub
 
 def test_add():
